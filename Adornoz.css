@@ -1,0 +1,955 @@
+
+/* =================================
+   ESTILOS GENERALES
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f4f6fa;
+    color: #222;
+}
+
+
+/* =================================
+   ENCABEZADO Y NAVEGACION
+================================= */
+
+header {
+    background-color: #101827;
+    padding: 18px 7%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #2196f3;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #2196f3;
+}
+
+.carrito {
+    color: white;
+    font-size: 20px;
+}
+
+
+/* =================================
+   SECCION INICIO
+================================= */
+
+.inicio {
+    min-height: 480px;
+    background: linear-gradient(120deg, #101827, #174b83);
+    display: flex;
+    align-items: center;
+    padding: 60px 10%;
+    color: white;
+}
+
+.contenido-inicio {
+    max-width: 600px;
+    animation: aparecer 1s ease;
+}
+
+.contenido-inicio h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.contenido-inicio p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+
+/* =================================
+   BOTONES
+================================= */
+
+.boton {
+    display: inline-block;
+    background-color: #2196f3;
+    color: white;
+    padding: 13px 25px;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.boton:hover {
+    background-color: #0875cf;
+    transform: translateY(-4px);
+}
+
+
+/* =================================
+   PRODUCTOS
+================================= */
+
+.productos {
+    padding: 70px 7%;
+    text-align: center;
+}
+
+.productos h2,
+.ofertas h2,
+.nosotros h2,
+.contacto h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #101827;
+}
+
+.descripcion {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+
+/* BUSCADOR */
+
+.buscador {
+    margin: 25px auto;
+}
+
+.buscador input {
+    width: 100%;
+    max-width: 450px;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+}
+
+.buscador input:focus {
+    border-color: #2196f3;
+}
+
+
+/* FILTROS */
+
+.filtros {
+    margin-bottom: 35px;
+}
+
+.filtro {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ddd;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filtro:hover,
+.filtro.activo {
+    background-color: #2196f3;
+    color: white;
+}
+
+
+/* TARJETAS DE PRODUCTOS */
+
+.lista-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.producto {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+    animation: aparecer 0.7s ease;
+}
+
+.producto:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.producto img {
+    width: 100%;
+    height: 190px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.producto h3 {
+    margin-bottom: 10px;
+    color: #101827;
+}
+
+.producto p {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.precio {
+    font-size: 21px;
+    font-weight: bold;
+    color: #0875cf;
+    margin-bottom: 15px;
+}
+
+.producto button {
+    width: 100%;
+}
+
+
+/* =================================
+   OFERTAS
+================================= */
+
+.ofertas {
+    background: linear-gradient(120deg, #174b83, #101827);
+    color: white;
+    text-align: center;
+    padding: 65px 10%;
+}
+
+.ofertas h2 {
+    color: white;
+}
+
+.ofertas p {
+    margin: 20px 0 30px;
+    font-size: 17px;
+}
+
+
+/* =================================
+   NOSOTROS
+================================= */
+
+.nosotros {
+    padding: 70px 10%;
+    text-align: center;
+}
+
+.nosotros > p {
+    max-width: 800px;
+    margin: 20px auto;
+    line-height: 1.7;
+    color: #555;
+}
+
+.informacion {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.informacion div {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+    transition: 0.3s;
+}
+
+.informacion div:hover {
+    transform: scale(1.03);
+}
+
+.informacion h3 {
+    color: #0875cf;
+    margin-bottom: 15px;
+}
+
+
+/* =================================
+   CONTACTO
+================================= */
+
+.contacto {
+    padding: 70px 10%;
+    text-align: center;
+    background-color: #e9eef5;
+}
+
+.contacto > p {
+    margin: 15px 0;
+    color: #555;
+}
+
+#formulario-contacto {
+    max-width: 500px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#formulario-contacto input,
+#formulario-contacto textarea {
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 15px;
+    outline: none;
+}
+
+#formulario-contacto input:focus,
+#formulario-contacto textarea:focus {
+    border-color: #2196f3;
+}
+
+#formulario-contacto textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+#respuesta-formulario {
+    color: #087c38;
+    font-weight: bold;
+}
+
+
+/* =================================
+   PIE DE PAGINA
+================================= */
+
+footer {
+    background-color: #101827;
+    color: white;
+    text-align: center;
+    padding: 30px 10px;
+}
+
+footer h3 {
+    color: #2196f3;
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+
+/* =================================
+   ANIMACIONES
+================================= */
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =================================
+   DISEÑO RESPONSIVE
+================================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .contenido-inicio h1 {
+        font-size: 34px;
+    }
+
+    .informacion {
+        grid-template-columns: 1fr;
+    }
+
+    .inicio {
+        padding: 60px 7%;
+    }
+
+    .productos {
+        padding: 50px 5%;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .menu a {
+        font-size: 13px;
+    }
+
+    .contenido-inicio h1 {
+        font-size: 29px;
+    }
+
+    .filtro {
+        padding: 9px 13px;
+    }
+
+}
+
+/* =================================
+   TITULO DE PAGINAS INTERNAS
+================================= */
+
+.titulo-pagina {
+    background: linear-gradient(120deg, #101827, #174b83);
+    color: white;
+    text-align: center;
+    padding: 65px 10%;
+}
+
+.titulo-pagina h1 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.titulo-pagina p {
+    font-size: 17px;
+}
+
+
+/* =================================
+   VENTANA DEL CARRITO
+================================= */
+
+.ventana-carrito {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.contenido-carrito {
+    background: white;
+    width: 100%;
+    max-width: 500px;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.contenido-carrito h2 {
+    margin-bottom: 20px;
+    color: #101827;
+}
+
+#lista-carrito {
+    margin-bottom: 20px;
+}
+
+.item-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+#total-carrito {
+    margin: 20px 0;
+    color: #0875cf;
+}
+
+#cerrar-carrito,
+#vaciar-carrito {
+    margin: 5px;
+}
+
+/* =================================
+   TARJETAS DE OFERTAS
+================================= */
+
+.lista-ofertas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.tarjeta-oferta {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    position: relative;
+    transition: 0.3s;
+    animation: aparecer 0.8s ease;
+}
+
+.tarjeta-oferta:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.tarjeta-oferta img {
+    width: 100%;
+    height: 190px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.tarjeta-oferta h3 {
+    margin-bottom: 10px;
+    color: #101827;
+}
+
+.tarjeta-oferta p {
+    margin-bottom: 10px;
+}
+
+.descuento {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #e53935;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.precio-anterior {
+    color: #999;
+    text-decoration: line-through;
+}
+
+.tarjeta-oferta .precio {
+    font-size: 22px;
+    color: #0875cf;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.tarjeta-oferta .boton {
+    width: 100%;
+    text-align: center;
+}
+
+/* =================================
+   PÁGINA NOSOTROS
+================================= */
+
+.historia-nosotros {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 60px 10%;
+}
+
+.texto-nosotros {
+    flex: 1;
+}
+
+.texto-nosotros h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.texto-nosotros p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.imagen-nosotros {
+    flex: 1;
+}
+
+.imagen-nosotros img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* MISIÓN Y VISIÓN */
+
+.informacion {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px 10%;
+    background-color: #f4f4f4;
+}
+
+.info-card {
+    flex: 1;
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+}
+
+.info-card:hover {
+    transform: translateY(-8px);
+}
+
+.info-card h2 {
+    margin-bottom: 15px;
+    color: #007bff;
+}
+
+.info-card p {
+    line-height: 1.7;
+    color: #555;
+}
+
+/* VALORES */
+
+.valores {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.valores h2 {
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+.valores-grid {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.valor-card {
+    flex: 1;
+    padding: 30px 20px;
+    border-radius: 12px;
+    background-color: #f4f4f4;
+    transition: transform 0.3s;
+}
+
+.valor-card:hover {
+    transform: translateY(-8px);
+}
+
+.valor-card h3 {
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.valor-card p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* COMPROMISO */
+
+.compromiso {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #222;
+    color: white;
+}
+
+.compromiso h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.compromiso p {
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/* ADAPTACIÓN PARA CELULARES */
+
+@media (max-width: 768px) {
+
+    .historia-nosotros {
+        flex-direction: column;
+        padding: 40px 6%;
+    }
+
+    .informacion {
+        flex-direction: column;
+        padding: 40px 6%;
+    }
+
+    .valores-grid {
+        flex-direction: column;
+    }
+
+}
+
+/* =================================
+   PÁGINA DE CONTACTO
+================================= */
+
+.seccion-contacto {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    padding: 60px 10%;
+}
+
+.informacion-contacto {
+    flex: 1;
+}
+
+.informacion-contacto h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.informacion-contacto p {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.dato-contacto {
+    margin-top: 25px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+}
+
+.dato-contacto h3 {
+    color: #007bff;
+    margin-bottom: 8px;
+}
+
+/* CONTENEDOR DEL FORMULARIO */
+
+.contenedor-formulario {
+    flex: 1;
+    padding: 30px;
+    background-color: #f4f4f4;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.contenedor-formulario h2 {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* CAMPOS DEL FORMULARIO */
+
+#formulario-contacto {
+    display: flex;
+    flex-direction: column;
+}
+
+#formulario-contacto label {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+#formulario-contacto input,
+#formulario-contacto textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+}
+
+#formulario-contacto input:focus,
+#formulario-contacto textarea:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+#formulario-contacto textarea {
+    resize: vertical;
+}
+
+#formulario-contacto .boton {
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#respuesta-formulario {
+    margin-top: 15px;
+    text-align: center;
+    color: #16803c;
+    font-weight: bold;
+}
+
+/* ADAPTACIÓN PARA CELULARES */
+
+@media (max-width: 768px) {
+
+    .seccion-contacto {
+        flex-direction: column;
+        padding: 40px 6%;
+    }
+
+    .informacion-contacto,
+    .contenedor-formulario {
+        width: 100%;
+    }
+
+}
+
+/* ==========================================
+   ANIMACIONES DEL PROYECTO
+========================================== */
+
+/* ANIMACIÓN 1: Aparición suave desde abajo */
+
+@keyframes aparecerAbajo {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.titulo-pagina h1 {
+    animation: aparecerAbajo 0.8s ease;
+}
+
+
+/* ANIMACIÓN 2: Aparición gradual */
+
+@keyframes aparecerGradual {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.producto,
+.tarjeta-oferta,
+.valor-card {
+    animation: aparecerGradual 1s ease;
+}
+
+
+/* ANIMACIÓN 3: Movimiento flotante */
+
+@keyframes flotar {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.imagen-nosotros img {
+    animation: flotar 3s ease-in-out infinite;
+}
+
+
+/* ANIMACIÓN 4: Efecto de pulso */
+
+@keyframes pulso {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.logo h2 {
+    animation: pulso 3s ease-in-out infinite;
+}
+
+
+/* RESPETAR PREFERENCIAS DE MOVIMIENTO */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+    }
+}

@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHONE STORE | Contacto</title>
+    <link rel="stylesheet" href="Adornoz.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO Y NAVEGACIÓN -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h2>PHONE STORE</h2>
+            </div>
+
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="celulares.html">Celulares</a></li>
+                <li><a href="ofertas.html">Ofertas</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- TÍTULO -->
+    <section class="titulo-pagina">
+        <h1>Contáctanos</h1>
+        <p>Estamos aquí para ayudarte.</p>
+    </section>
+
+    <!-- CONTENIDO DE CONTACTO -->
+    <section class="seccion-contacto">
+
+        <div class="informacion-contacto">
+            <h2>¿Tienes alguna consulta?</h2>
+
+            <p>
+                Si necesitas información sobre nuestros celulares,
+                precios u ofertas, puedes enviarnos un mensaje
+                mediante el siguiente formulario.
+            </p>
+
+            <div class="dato-contacto">
+                <h3>Atención al cliente</h3>
+                <p>Estamos disponibles para responder tus consultas.</p>
+            </div>
+
+            <div class="dato-contacto">
+                <h3>Ubicación</h3>
+                <p>Santa Cruz de la Sierra, Bolivia.</p>
+            </div>
+        </div>
+
+        <!-- FORMULARIO -->
+        <div class="contenedor-formulario">
+
+            <h2>Envíanos un mensaje</h2>
+
+            <form id="formulario-contacto">
+
+                <label for="nombre">Nombre completo:</label>
+                <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    placeholder="Escribe tu nombre"
+                    required
+                >
+
+                <label for="correo">Correo electrónico:</label>
+                <input
+                    type="email"
+                    id="correo"
+                    name="correo"
+                    placeholder="ejemplo@correo.com"
+                    required
+                >
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea
+                    id="mensaje"
+                    name="mensaje"
+                    rows="5"
+                    placeholder="Escribe tu consulta..."
+                    required
+                ></textarea>
+
+                <button type="submit" class="boton">
+                    Enviar mensaje
+                </button>
+
+                <p id="respuesta-formulario"></p>
+
+            </form>
+        </div>
+
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>&copy; 2026 PHONE STORE - Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="Operaciones.js"></script>
+
+</body>
+</html>

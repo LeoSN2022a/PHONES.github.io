@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PHONE STORE | Celulares</title>
+
+    <link rel="stylesheet" href="Adornoz.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                PHONE <span>STORE</span>
+            </div>
+
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="celulares.html">Celulares</a></li>
+                <li><a href="ofertas.html">Ofertas</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+
+            <div class="carrito" id="abrir-carrito">
+                🛒 <span id="contador-carrito">0</span>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- TITULO DE LA PAGINA -->
+    <section class="titulo-pagina">
+
+        <h1>Nuestros celulares</h1>
+
+        <p>
+            Encuentra el smartphone ideal para ti.
+            Tenemos las mejores marcas y precios.
+        </p>
+
+    </section>
+
+
+    <!-- CATALOGO -->
+    <section id="productos" class="productos">
+
+        <h2>Catálogo de productos</h2>
+
+        <p class="descripcion">
+            Explora nuestros modelos disponibles.
+        </p>
+
+
+        <!-- BUSCADOR -->
+        <div class="buscador">
+
+            <input
+                type="text"
+                id="buscar-celular"
+                placeholder="Buscar por nombre o marca..."
+            >
+
+        </div>
+
+
+        <!-- FILTROS -->
+        <div class="filtros">
+
+            <button class="filtro activo" data-marca="todos">
+                Todos
+            </button>
+
+            <button class="filtro" data-marca="Apple">
+                Apple
+            </button>
+
+            <button class="filtro" data-marca="Samsung">
+                Samsung
+            </button>
+
+            <button class="filtro" data-marca="Xiaomi">
+                Xiaomi
+            </button>
+
+        </div>
+
+
+        <!-- PRODUCTOS GENERADOS CON JAVASCRIPT -->
+        <div id="lista-productos" class="lista-productos">
+
+        </div>
+
+    </section>
+
+
+    <!-- VENTANA DEL CARRITO -->
+    <section id="ventana-carrito" class="ventana-carrito">
+
+        <div class="contenido-carrito">
+
+            <h2>Mi carrito</h2>
+
+            <div id="lista-carrito">
+
+                <!-- Los productos aparecerán aquí -->
+
+            </div>
+
+            <h3 id="total-carrito">
+                Total: Bs. 0
+            </h3>
+
+            <button id="vaciar-carrito" class="boton">
+                Vaciar carrito
+            </button>
+
+            <button id="cerrar-carrito" class="boton">
+                Cerrar
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- PIE DE PAGINA -->
+    <footer>
+
+        <h3>PHONE STORE</h3>
+
+        <p>Tu mejor opción en tecnología.</p>
+
+        <p>© 2026 PHONE STORE - Todos los derechos reservados.</p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="Operaciones.js"></script>
+
+</body>
+</html>
